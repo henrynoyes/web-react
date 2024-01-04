@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 import Button from "../Button";
 // Local Data
 import data from "../../data/portfolio.json";
-import Image from "next/Image";
+import Image from "next/image";
 
 const Header = ({ handleWorkScroll, handleAboutScroll, handleProjectScroll}) => {
   const router = useRouter();
