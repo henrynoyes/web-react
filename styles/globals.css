@@ -1,15 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Hind:wght@400;500;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 @import "./markdown.css";
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap');
 
 * {
-  font-family: "Hind";
-}
-
-body {
-  @apply dark:bg-black dark:text-white;
+  font-family: 'Source Sans 3', sans-serif;
 }
 
 .gradient-circle {
@@ -57,6 +53,26 @@ body {
   opacity: var(0.7);
   transition: opacity 0.3s;
   border-radius: inherit;
+}
+
+.text-link {
+  color: rgb(255 0 0);
+}
+.text-link:hover {
+  text-decoration-line: underline;
+  color: rgb(255 75 75);
+}
+
+.image-link {
+  object-fit: cover;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+.image-link:hover {
+  scale: 110%;
 }
 
 /* 

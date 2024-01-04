@@ -5,8 +5,9 @@ import React, { useEffect, useState } from "react";
 import Button from "../Button";
 // Local Data
 import data from "../../data/portfolio.json";
+import Image from "next/Image";
 
-const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
+const Header = ({ handleWorkScroll, handleAboutScroll, handleProjectScroll}) => {
   const router = useRouter();
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
@@ -22,13 +23,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
       <Popover className="block tablet:hidden mt-5">
         {({ open }) => (
           <>
-            <div className="flex items-center justify-between p-2 laptop:p-0">
-              <h1
-                onClick={() => router.push("/")}
-                className="font-medium p-2 laptop:p-0 link"
-              >
-                {name}.
-              </h1>
+            <div className="flex items-center justify-end p-2 laptop:p-0">
 
               <div className="flex items-center">
                 {data.darkMode && (
@@ -37,18 +32,20 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                       setTheme(theme === "dark" ? "light" : "dark")
                     }
                   >
-                    <img
-                      className="h-6"
+                    <Image
+                      alt="darkmode toggle"
                       src={`/images/${
                         theme === "dark" ? "moon.svg" : "sun.svg"
                       }`}
-                    ></img>
+                      height={26}
+                      width={26}
+                    ></Image>
                   </Button>
                 )}
 
                 <Popover.Button>
-                  <img
-                    className="h-5"
+                  <Image
+                    alt="menu"
                     src={`/images/${
                       !open
                         ? theme === "dark"
@@ -58,138 +55,55 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                         ? "cancel.svg"
                         : "cancel-white.svg"
                     }`}
-                  ></img>
+                    height={32}
+                    width={32}
+                  ></Image>
                 </Popover.Button>
               </div>
             </div>
             <Popover.Panel
-              className={`absolute right-0 z-10 w-11/12 p-4 ${
+              className={`absolute right-0 z-10 w-1/4 p-4 ${
                 theme === "dark" ? "bg-slate-800" : "bg-white"
               } shadow-md rounded-md`}
             >
-              {!isBlog ? (
-                <div className="grid grid-cols-1">
-                  <Button onClick={handleWorkScroll}>Work</Button>
-                  <Button onClick={handleAboutScroll}>About</Button>
-                  {showBlog && (
-                    <Button onClick={() => router.push("/blog")}>Blog</Button>
-                  )}
-                  {showResume && (
-                    <Button
-                      onClick={() =>
-                        window.open("mailto:hello@chetanverma.com")
-                      }
-                    >
-                      Resume
-                    </Button>
-                  )}
-
-                  <Button
-                    onClick={() => window.open("mailto:hello@chetanverma.com")}
-                  >
-                    Contact
-                  </Button>
-                </div>
-              ) : (
-                <div className="grid grid-cols-1">
-                  <Button onClick={() => router.push("/")} classes="first:ml-1">
-                    Home
-                  </Button>
-                  {showBlog && (
-                    <Button onClick={() => router.push("/blog")}>Blog</Button>
-                  )}
-                  {showResume && (
-                    <Button
-                      onClick={() => router.push("/resume")}
-                      classes="first:ml-1"
-                    >
-                      Resume
-                    </Button>
-                  )}
-
-                  <Button
-                    onClick={() => window.open("mailto:hello@chetanverma.com")}
-                  >
-                    Contact
-                  </Button>
-                </div>
-              )}
+              <div className="grid grid-cols-1">
+                <Button onClick={() => router.push("/")} classes="first:ml-1">
+                  Home
+                </Button>
+                <Button onClick={handleAboutScroll}>About</Button>
+                <Button onClick={handleWorkScroll}>Work</Button>
+                <Button onClick={handleProjectScroll}>Projects</Button>
+              </div>
             </Popover.Panel>
           </>
         )}
       </Popover>
       <div
-        className={`mt-10 hidden flex-row items-center justify-between sticky ${
-          theme === "light" && "bg-white"
+        className={`hidden flex-row items-center justify-end sticky ${
+          theme === "dark" ? "bg-gray-800" : "bg-gray-100"
         } dark:text-white top-0 z-10 tablet:flex`}
       >
-        <h1
-          onClick={() => router.push("/")}
-          className="font-medium cursor-pointer mob:p-2 laptop:p-0"
-        >
-          {name}.
-        </h1>
-        {!isBlog ? (
-          <div className="flex">
-            <Button onClick={handleWorkScroll}>Work</Button>
-            <Button onClick={handleAboutScroll}>About</Button>
-            {showBlog && (
-              <Button onClick={() => router.push("/blog")}>Blog</Button>
-            )}
-            {showResume && (
-              <Button
-                onClick={() => router.push("/resume")}
-                classes="first:ml-1"
-              >
-                Resume
-              </Button>
-            )}
+        <div className="flex">
+          <Button onClick={() => router.push("/")} classes="first:ml-1">
+            Home
+          </Button>
+          <Button onClick={handleAboutScroll}>About</Button>
+          <Button onClick={handleWorkScroll}>Work</Button>
+          <Button onClick={handleProjectScroll}>Projects</Button>
 
-            <Button onClick={() => window.open("mailto:hello@chetanverma.com")}>
-              Contact
+          {mounted && theme && data.darkMode && (
+            <Button
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            >
+              <Image
+                alt="darkmode toggle"
+                src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
+                width={32}
+                height={32}
+              ></Image>
             </Button>
-            {mounted && theme && data.darkMode && (
-              <Button
-                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              >
-                <img
-                  className="h-6"
-                  src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
-                ></img>
-              </Button>
-            )}
+          )}
           </div>
-        ) : (
-          <div className="flex">
-            <Button onClick={() => router.push("/")}>Home</Button>
-            {showBlog && (
-              <Button onClick={() => router.push("/blog")}>Blog</Button>
-            )}
-            {showResume && (
-              <Button
-                onClick={() => router.push("/resume")}
-                classes="first:ml-1"
-              >
-                Resume
-              </Button>
-            )}
-
-            <Button onClick={() => window.open("mailto:hello@chetanverma.com")}>
-              Contact
-            </Button>
-
-            {mounted && theme && data.darkMode && (
-              <Button
-                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              >
-                <img
-                  className="h-6"
-                  src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
-                ></img>
-              </Button>
-            )}
-          </div>
-        )}
       </div>
     </>
   );
