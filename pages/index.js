@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import Header from "../components/Header";
-import Socials from "../components/Socials";
+import Socials2 from "../components/Socials2";
 import WorkCard from "../components/WorkCard";
 import { useIsomorphicLayoutEffect } from "../utils";
 import { stagger } from "../animations";
@@ -89,7 +89,7 @@ export default function Home() {
           </div>
         </div>
         <div className="flex mt-2 justify-center">
-          <Socials className="mt-2 laptop:mt-5" />
+          <Socials2 className="mt-2 laptop:mt-5" />
         </div>
 
         
