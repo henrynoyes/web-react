@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 @import "./markdown.css";
+@import "@fortawesome/fontawesome-svg-core/styles.css";
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap');
 
 * {
@@ -73,6 +74,23 @@
 }
 .image-link:hover {
   scale: 110%;
+}
+
+.sliding {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.bg-moon {
+  background-image: url("/images/bg-moon.png");
+  background-size: contain;
+  background-repeat: repeat-x;
+}
+
+.bg-mars {
+  background-image: url("/images/bg-mars.png");
+  background-size: contain;
+  background-repeat: repeat-x;
 }
 
 /* 

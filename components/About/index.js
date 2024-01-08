@@ -16,6 +16,7 @@ const About = ({}) => {
             src={"/images/profile_pic.jpeg"}
             width={400}
             height={400}
+            priority={true}
         ></Image>
         </div>
         <div className="relative basis-1/2">

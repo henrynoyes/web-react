@@ -2,17 +2,22 @@ import { Popover } from "@headlessui/react";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
+import { useIsomorphicLayoutEffect } from "../../utils";
 import Button from "../Button";
-
 import Image from "next/image";
+import { slide } from "../../animations";
 
-const Header = ({ handleWorkScroll, handleAboutScroll, handleProjectScroll}) => {
+const MovingHeader = ({ handleWorkScroll, handleAboutScroll, handleProjectScroll}) => {
   const router = useRouter();
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
+  }, []);
+
+  useIsomorphicLayoutEffect(() => {
+    slide(".sliding");
   }, []);
 
   return (
@@ -74,11 +79,33 @@ const Header = ({ handleWorkScroll, handleAboutScroll, handleProjectScroll}) => 
         )}
       </Popover>
       <div
-        className={`hidden flex-row justify-end sticky ${
-          // theme === "dark" ? "bg-gray-800" : "bg-gray-100"
-          theme === "dark" ? "bg-cyan-400" : "bg-cyan-400"
+        className={`hidden flex-row justify-between sticky ${
+          theme === "dark" ? "bg-moon" : "bg-mars"
         } dark:text-white top-0 z-10 tablet:flex`}
       >
+        {theme === "dark" ? (
+          <div className="sliding mt-5">
+              {mounted && (
+                <Image
+                alt="rover"
+                src="/images/pixel-cobra.png"
+                width={32}
+                height={32}
+                ></Image>
+              )}
+          </div>
+        ) : (
+          <div className="sliding">
+            {mounted && (
+              <Image
+              alt="rover"
+              src="/images/pixel-persy.png"
+              width={71}
+              height={55}
+              ></Image>
+            )}
+          </div>
+        )}
         <div className="flex">
           <Button onClick={() => router.push("/")} classes="first:ml-1">
             Home
@@ -105,4 +132,4 @@ const Header = ({ handleWorkScroll, handleAboutScroll, handleProjectScroll}) => 
   );
 };
 
-export default Header;
+export default MovingHeader;

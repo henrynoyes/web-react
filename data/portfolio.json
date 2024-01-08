@@ -1,10 +1,6 @@
 {
-  "name": "Chetan",
+  "name": "Henry Noyes",
   "headerTaglineOne": "Henry Noyes",
-  "showCursor": false,
-  "showBlog": false,
-  "darkMode": true,
-  "showResume": false,
   "socials": [
     {
       "id": "1",
@@ -16,7 +12,7 @@
       "title": "LinkedIn",
       "link": "https://www.linkedin.com/in"
     },
-    { "id": "3", "title": "Email", "link": "mailto:.com" }
+    { "id": "3", "title": "Email", "link": "mailto:hnoyes8@gmail.com" }
   ],
   "work": [
     {
@@ -34,7 +30,7 @@
       "url": ""
     },
     {
-      "id": "2",
+      "id": "3",
       "title": "Work Two",
       "description": "Web Development",
       "imageSrc": "/images/plasma.jpg",
@@ -57,15 +53,5 @@
       "url": ""
     }
   ],
-  "services": [],
-  "aboutpara": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-  "resume": {
-    "tagline": "",
-    "description": "",
-    "experiences": [],
-    "education": {},
-    "languages": [],
-    "frameworks": [],
-    "others": []
-  }
+  "services": []
 }
