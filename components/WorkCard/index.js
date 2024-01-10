@@ -1,13 +1,13 @@
 import React from "react";
 import Image from "next/image";
 
-const WorkCard = ({ img, name, description, onClick }) => {
+const WorkCard = ({ img, name, onClick }) => {
   return (
     <div
-      className="p-2 laptop:p-2 first:ml-0"
+      className="p-2 first:ml-0"
     >
       <div
-        className="cursor-pointer rounded-lg overflow-hidden relative transition-all ease-out duration-300 link"
+        className="cursor-pointer rounded-lg overflow-hidden relative"
         onClick={onClick}
       >
         <Image
@@ -20,12 +20,9 @@ const WorkCard = ({ img, name, description, onClick }) => {
       </div>
       <div className="flex items-center justify-center">
         <h1 className="mt-2 text-2xl font-medium">
-          {name ? name : "Project Name"}
+          {name}
         </h1>
         </div>
-      {/* <h2 className="text-xl opacity-50">
-        {description ? description : ""}
-      </h2> */}
     </div>
   );
 };

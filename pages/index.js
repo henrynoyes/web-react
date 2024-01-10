@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { useRouter } from "next/router";
 import Socials from "../components/Socials";
 import WorkCard from "../components/WorkCard";
 import { useIsomorphicLayoutEffect } from "../utils";
@@ -19,19 +20,21 @@ export default function Home() {
   const aboutRef = useRef();
   const projectRef = useRef();
   const textOne = useRef();
+  const router = useRouter();
 
   // Handling Scroll
-  const handleWorkScroll = () => {
+
+  const handleAboutScroll = () => {
     window.scrollTo({
-      top: workRef.current.offsetTop,
+      top: aboutRef.current.offsetTop - 70,
       left: 0,
       behavior: "smooth",
     });
   };
 
-  const handleAboutScroll = () => {
+  const handleWorkScroll = () => {
     window.scrollTo({
-      top: aboutRef.current.offsetTop,
+      top: workRef.current.offsetTop - 70,
       left: 0,
       behavior: "smooth",
     });
@@ -39,7 +42,7 @@ export default function Home() {
 
   const handleProjectScroll = () => {
     window.scrollTo({
-      top: projectRef.current.offsetTop,
+      top: projectRef.current.offsetTop - 70,
       left: 0,
       behavior: "smooth",
     });
@@ -55,17 +58,18 @@ export default function Home() {
 
   const { theme } = useTheme();
 
+  // ${theme === "dark" ? "bg-moonsoil text-black" : "bg-marssoil text-white"}
+  // ${theme === "dark" ? "bg-[#D9D9D9] text-white" : "bg-[#B76945] text-black"}
+
   return (
     <div className={`relative
-    ${theme === "dark" ? "bg-zinc-800 text-white" : "bg-[#D5B59C] text-black"}
+    ${theme === "dark" ? "bg-[#D9D9D9] text-black" : "bg-[#B76945] text-white"}
     `}>
 
       <Head>
         <title>{data.name}</title>
       </Head>
 
-      {/* <div className="gradient-circle"></div>
-      <div className="gradient-circle-bottom"></div> */}
       <MovingHeader
         handleWorkScroll={handleWorkScroll}
         handleAboutScroll={handleAboutScroll}
@@ -73,13 +77,13 @@ export default function Home() {
       />
 
       <div className="container mx-auto">
-        <div className="flex mt-10 justify-center">
+        <div className="flex mt-2 tablet:mt-10 justify-center">
           <div>
             <h1
               ref={textOne}
-              className="text-5xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 text-bold w-4/5 mob:w-full"
+              className="text-5xl tablet:text-6xl laptopl:text-8xl p-1 tablet:p-2 text-bold"
             >
-              {data.headerTaglineOne}
+              Henry Noyes
             </h1>
           </div>
         </div>
@@ -93,7 +97,7 @@ export default function Home() {
         </div>
 
         <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={workRef}>
-          <h1 className="text-4xl m-2 text-bold">Work.</h1>
+          <h1 className="text-4xl m-2 text-bold">My Work</h1>
 
           <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-3 gap-4">
             {data.work.map((project) => (
@@ -101,23 +105,21 @@ export default function Home() {
                 key={project.id}
                 img={project.imageSrc}
                 name={project.title}
-                description={project.description}
-                onClick={() => window.open(project.url)}
+                onClick={() => router.push(project.url)}
               />
             ))}
           </div>
         </div>
 
         <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={projectRef}>
-          <h1 className="text-4xl m-2 text-bold">Projects</h1>
+          <h1 className="text-4xl m-2 text-bold">My Projects</h1>
 
-          <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 gap-4">
+          <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-3 gap-4">
             {data.projects.map((project) => (
               <WorkCard
                 key={project.id}
                 img={project.imageSrc}
                 name={project.title}
-                description={project.description}
                 onClick={() => window.open(project.url)}
               />
             ))}

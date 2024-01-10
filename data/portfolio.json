@@ -1,55 +1,42 @@
 {
   "name": "Henry Noyes",
-  "headerTaglineOne": "Henry Noyes",
-  "socials": [
-    {
-      "id": "1",
-      "title": "Github",
-      "link": "https://github.com/"
-    },
-    {
-      "id": "2",
-      "title": "LinkedIn",
-      "link": "https://www.linkedin.com/in"
-    },
-    { "id": "3", "title": "Email", "link": "mailto:hnoyes8@gmail.com" }
-  ],
   "work": [
     {
       "id": "1",
       "title": "Robotics Engineer – RIVeR Lab",
-      "description": "",
-      "imageSrc": "/images/anno.jpg",
-      "url": ""
+      "imageSrc": "/images/work/river/anno.jpg",
+      "url": "/river"
     },
     {
       "id": "2",
       "title": "Electrical Lead – COBRA",
-      "description": "",
-      "imageSrc": "/images/desert.jpg",
-      "url": ""
+      "imageSrc": "/images/work/cobra/latch.gif",
+      "url": "/cobra"
     },
     {
       "id": "3",
-      "title": "Work Two",
-      "description": "Web Development",
-      "imageSrc": "/images/plasma.jpg",
-      "url": ""
+      "title": "Plasma Engineer – MAAT Energy",
+      "imageSrc": "/images/work/maat/plume.gif",
+      "url": "/maat"
     }
   ],
   "projects": [
     {
       "id": "1",
-      "title": "Project One Test",
-      "description": "Web Design",
-      "imageSrc": "/images/plasma.jpg",
+      "title": "JARVIS-GPT",
+      "imageSrc": "/images/projects/jarvis_logo.png",
       "url": ""
     },
     {
       "id": "2",
-      "title": "Project Two",
-      "description": "Web Development",
-      "imageSrc": "/images/plasma.jpg",
+      "title": "Birdcam",
+      "imageSrc": "/images/projects/squint.gif",
+      "url": "https://github.com/henrynoyes/birdcam"
+    },
+    {
+      "id": "3",
+      "title": "Custom NHL Goal Button",
+      "imageSrc": "/images/projects/goal-button.jpg",
       "url": ""
     }
   ],
