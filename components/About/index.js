@@ -20,7 +20,7 @@ const About = ({}) => {
         ></Image>
         </div>
         <div className="relative basis-1/2">
-          <h1 className="m-4 mt-10 laptop:mt-4 text-4xl text-bold">About Me</h1>
+          <h1 className="m-4 mt-10 laptop:mt-4 text-4xl">About Me</h1>
           <p className="m-6 text-md laptop:text-xl">
             I am a 4th year undergraduate student at Northeastern University studying Mathematics and Physics, with a minor in Data Science, planning to graduate in <b>May 2024</b>. 
             With my fundamental background, I have been able to take on several engineering roles in the fields of energy and robotics. 

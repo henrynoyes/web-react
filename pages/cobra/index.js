@@ -40,7 +40,7 @@ const CobraPage = () => {
           <div>
             <h1
               ref={textOne}
-              className="text-5xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 text-bold w-4/5 mob:w-full"
+              className="text-5xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 font-mont w-4/5 mob:w-full"
             >
               COBRA
             </h1>

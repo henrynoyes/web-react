@@ -9,6 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fontsource/bungee-hairline": "^5.0.18",
+    "@fontsource/libre-caslon-text": "^5.0.18",
+    "@fontsource/montserrat": "^5.0.16",
+    "@fontsource/source-sans-pro": "^5.0.8",
+    "@fontsource/ubuntu": "^5.0.8",
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
     "@fortawesome/free-brands-svg-icons": "^6.5.1",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",

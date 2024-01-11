@@ -12,7 +12,14 @@ module.exports = {
       desktop: "1280px",
       laptopl: "1440px",
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        librecaslon: ["Libre Caslon Text", "sans-serif"],
+        ubuntu: ["Ubuntu", "sans-serif"],
+        mont: ["Montserrat Variable", "sans-serif"],
+        bungee: ["Bungee Hairline", "sans-serif"]
+      }
+    },
   },
   plugins: [],
 };

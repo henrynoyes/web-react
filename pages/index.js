@@ -81,7 +81,7 @@ export default function Home() {
           <div>
             <h1
               ref={textOne}
-              className="text-5xl tablet:text-6xl laptopl:text-8xl p-1 tablet:p-2 text-bold"
+              className="text-5xl tablet:text-6xl laptopl:text-8xl p-1 tablet:p-2 font-bungee"
             >
               Henry Noyes
             </h1>
@@ -97,7 +97,7 @@ export default function Home() {
         </div>
 
         <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={workRef}>
-          <h1 className="text-4xl m-2 text-bold">My Work</h1>
+          <h1 className="text-4xl m-2">My Work</h1>
 
           <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-3 gap-4">
             {data.work.map((project) => (
@@ -112,7 +112,7 @@ export default function Home() {
         </div>
 
         <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={projectRef}>
-          <h1 className="text-4xl m-2 text-bold">My Projects</h1>
+          <h1 className="text-4xl m-2">My Projects</h1>
 
           <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-3 gap-4">
             {data.projects.map((project) => (

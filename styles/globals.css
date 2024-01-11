@@ -3,10 +3,14 @@
 @tailwind utilities;
 @import "./markdown.css";
 @import "@fortawesome/fontawesome-svg-core/styles.css";
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap');
+@import "@fontsource/source-sans-pro";
+@import "@fontsource/libre-caslon-text";
+@import "@fontsource/ubuntu";
+@import "@fontsource/montserrat";
+@import "@fontsource/bungee-hairline";
 
 * {
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .text-link {
