@@ -13,12 +13,20 @@
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-.text-link {
+.text-link-red {
   color: rgb(255 0 0);
 }
-.text-link:hover {
+.text-link-red:hover {
   text-decoration-line: underline;
   color: rgb(255 75 75);
+}
+
+.text-link-blue {
+  color: rgb(150 225 255);
+}
+.text-link-blue:hover {
+  text-decoration-line: underline;
+  color: rgb(190, 225, 255);
 }
 
 .image-link {
@@ -51,12 +59,12 @@
 }
 
 .bg-moonsoil {
-  background-image: url("/images/dots.png");
+  background-image: url("/images/bg-moonsoil.png");
   background-repeat: repeat;
 }
 
 .bg-marssoil {
-  background-image: url("/images/dots.png");
+  background-image: url("/images/bg-marssoil.png");
   background-repeat: repeat;
 }
 
@@ -88,4 +96,8 @@
   justify-content: center;
   align-items: center;
   height: 100%;
+}
+
+.letter {
+  visibility: hidden;
 }

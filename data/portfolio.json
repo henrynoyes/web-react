@@ -25,7 +25,7 @@
       "id": "1",
       "title": "JARVIS-GPT",
       "imageSrc": "/images/projects/jarvis_logo.png",
-      "url": ""
+      "url": "https://github.com/henrynoyes/jarvis-gpt"
     },
     {
       "id": "2",
@@ -35,10 +35,9 @@
     },
     {
       "id": "3",
-      "title": "Custom NHL Goal Button",
-      "imageSrc": "/images/projects/goal-button.jpg",
-      "url": ""
+      "title": "ColorkuConvert",
+      "imageSrc": "/images/projects/colorku.png",
+      "url": "https://github.com/henrynoyes/ColorkuConvert"
     }
-  ],
-  "services": []
+  ]
 }

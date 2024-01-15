@@ -91,17 +91,17 @@ const MovingHeader = ({ handleWorkScroll, handleAboutScroll, handleProjectScroll
               </div>
             </div>
             <Popover.Panel
-              className={`absolute right-0 z-10 w-1/4 p-4 ${
-                theme === "dark" ? "bg-white" : "bg-slate-800"
+              className={`absolute right-0 z-10 w-1/4 p-1 ${
+                theme === "dark" ? "bg-[#262628]" : "bg-[#d5b69d]"
               } shadow-md rounded-md`}
             >
-              <div className="grid grid-cols-1">
-                <Button onClick={() => router.push("/")} classes="first:ml-1">
+              <div className="grid grid-cols-1 items-center">
+                <Button onClick={() => router.push("/")} type="header">
                   Home
                 </Button>
-                <Button onClick={handleAboutScroll}>About</Button>
-                <Button onClick={handleWorkScroll}>Work</Button>
-                <Button onClick={handleProjectScroll}>Projects</Button>
+                <Button onClick={handleAboutScroll} type="header">About</Button>
+                <Button onClick={handleWorkScroll} type="header">Work</Button>
+                <Button onClick={handleProjectScroll} type="header">Projects</Button>
               </div>
             </Popover.Panel>
           </>

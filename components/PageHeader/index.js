@@ -22,12 +22,39 @@ const PageHeader = () => {
 
   return (
     <>
-      <Popover className="block tablet:hidden">
+      <Popover className="sticky top-0 z-10 tablet:hidden">
         {({ open }) => (
           <>
-            <div className="flex items-center justify-end p-2 laptop:p-0">
+            <div
+              className={`flex justify-between ${
+                theme === "dark" ? "bg-moonsky" : "bg-marssky"
+              } dark:text-white`}
+            >
+              {theme === "dark" ? (
+                <div className="sliding mt-5">
+                    {mounted && (
+                      <Image
+                      alt="rover"
+                      src="/images/header/pixel-cobra.png"
+                      width={32}
+                      height={32}
+                      ></Image>
+                    )}
+                </div>
+              ) : (
+                <div className="sliding">
+                  {mounted && (
+                    <Image
+                    alt="rover"
+                    src="/images/header/pixel-persy.png"
+                    width={71}
+                    height={55}
+                    ></Image>
+                  )}
+                </div>
+              )}
 
-              <div className="flex items-center">
+              <div className="flex items-center mr-2">
                 <Button
                   onClick={() =>
                     setTheme(theme === "dark" ? "light" : "dark")
@@ -50,11 +77,11 @@ const PageHeader = () => {
                     src={`/images/header/${
                       !open
                         ? theme === "dark"
-                          ? "menu.svg"
-                          : "menu-white.svg"
+                          ? "menu-white.svg"
+                          : "menu.svg"
                         : theme === "light"
-                        ? "cancel-white.svg"
-                        : "cancel.svg"
+                        ? "cancel.svg"
+                        : "cancel-white.svg"
                     }`}
                     height={32}
                     width={32}
@@ -63,12 +90,12 @@ const PageHeader = () => {
               </div>
             </div>
             <Popover.Panel
-              className={`absolute right-0 z-10 w-1/4 p-4 ${
-                theme === "dark" ? "bg-white" : "bg-slate-800"
+              className={`absolute right-0 z-10 w-1/5 p-1 ${
+                theme === "dark" ? "bg-[#262628]" : "bg-[#d5b69d]"
               } shadow-md rounded-md`}
             >
-              <div className="grid grid-cols-1">
-                <Button onClick={() => router.push("/")} classes="first:ml-1">
+              <div className="grid grid-cols-1 items-center text-center">
+                <Button onClick={() => router.push("/")} type="header">
                   Home
                 </Button>
               </div>
@@ -113,6 +140,7 @@ const PageHeader = () => {
           {mounted && theme && (
             <Button
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              type="header"
             >
               <Image
                 alt="darkmode toggle"

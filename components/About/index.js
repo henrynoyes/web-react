@@ -1,8 +1,11 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useTheme } from "next-themes";
 
 const About = ({}) => {
+  const { theme } = useTheme();
+
   return (
     <>
       <div className="laptop:flex flex-row justify-center gap-4">
@@ -30,13 +33,13 @@ const About = ({}) => {
             considering pursuing a Master&apos;s degree in robotics. In my time outside of the classroom, I work as a lab assistant at the
             {" "}
             <Link href="https://web.northeastern.edu/ipl/">
-            <a className="text-link" target="_blank" rel="noopener noreferrer">Introductory Physics Laboratory</a>
+            <a className={theme === "dark" ? "text-link-red" : "text-link-blue"} target="_blank" rel="noopener noreferrer">Introductory Physics Laboratory</a>
             </Link>
             {" "}
             at Northeastern and a robotics researcher at the 
             {" "}
             <Link href="https://siliconsynapse.sites.northeastern.edu/">
-            <a className="text-link" target="_blank" rel="noopener noreferrer">Silicon Synapse Lab</a>
+            <a className={theme === "dark" ? "text-link-red" : "text-link-blue"} target="_blank" rel="noopener noreferrer">Silicon Synapse Lab</a>
             </Link>
             —more about that below!
           </p>

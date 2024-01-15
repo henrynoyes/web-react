@@ -50,11 +50,13 @@ export default function Home() {
   
   useIsomorphicLayoutEffect(() => {
     stagger(
-      textOne.current,
-      { y: 40, x: -10, transform: "scale(0.95) skew(10deg)" },
-      { y: 0, x: 0, transform: "scale(1)" }
+      ".letter",
+      0.2,
+      { y: 0, x: -100},
+      { y: 0, x: 0,}
     );
   }, []);
+  
 
   const { theme } = useTheme();
 
@@ -63,7 +65,7 @@ export default function Home() {
 
   return (
     <div className={`relative
-    ${theme === "dark" ? "bg-[#D9D9D9] text-black" : "bg-[#B76945] text-white"}
+    ${theme === "dark" ? "bg-moonsoil text-black" : "bg-marssoil text-white"}
     `}>
 
       <Head>
@@ -81,9 +83,19 @@ export default function Home() {
           <div>
             <h1
               ref={textOne}
-              className="text-5xl tablet:text-6xl laptopl:text-8xl p-1 tablet:p-2 font-bungee"
+              className="text-5xl tablet:text-6xl laptop:text-8xl p-1 tablet:p-2"
             >
-              Henry Noyes
+              <span className="letter font-bungee">H</span>
+              <span className="letter font-bungee">e</span>
+              <span className="letter font-bungee">n</span>
+              <span className="letter font-bungee">r</span>
+              <span className="letter font-bungee">y</span>
+              {" "}
+              <span className="letter font-bungee">N</span>
+              <span className="letter font-bungee">o</span>
+              <span className="letter font-bungee">y</span>
+              <span className="letter font-bungee">e</span>
+              <span className="letter font-bungee">s</span>
             </h1>
           </div>
         </div>

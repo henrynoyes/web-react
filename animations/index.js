@@ -3,11 +3,11 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export const stagger = (target, fromvVars, toVars) => {
+export const stagger = (targets, speed, fromVars, toVars) => {
   return gsap.fromTo(
-    target,
-    { opacity: 0, ...fromvVars },
-    { opacity: 1, ...toVars, stagger: 0.2, ease: Power3.easeOut }
+    targets,
+    { autoAlpha: 0, ...fromVars },
+    { autoAlpha: 1, ...toVars, stagger: speed, ease: Power3.easeOut },
   );
 };
 
@@ -17,7 +17,7 @@ export const slide = (target, offset) => {
       scrollTrigger: {
         scrub: 1,
       },
-      x: document.documentElement.scrollWidth - offset,
+      x: document.documentElement.scrollWidth < 768 ? document.documentElement.scrollWidth - 160 : document.documentElement.scrollWidth - offset,
     }
   );
 };

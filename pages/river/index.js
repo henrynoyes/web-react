@@ -17,7 +17,8 @@ const RiverPage = () => {
   useIsomorphicLayoutEffect(() => {
     stagger(
       textOne.current,
-      { y: 40, x: -10, transform: "scale(0.95) skew(10deg)" },
+      1,
+      { y: -40, x: -10, transform: "scale(0.8)" },
       { y: 0, x: 0, transform: "scale(1)" }
     );
   }, []);
@@ -26,7 +27,7 @@ const RiverPage = () => {
 
   return (
     <div className={`relative
-    ${theme === "dark" ? "bg-[#D9D9D9] text-black" : "bg-[#B76945] text-white"}
+    ${theme === "dark" ? "bg-moonsoil text-black" : "bg-marssoil text-white"}
     `}>
 
       <Head>
