@@ -5,7 +5,7 @@ import { stagger } from "../../animations";
 import Footer from "../../components/Footer";
 import CustomHead from "../../components/CustomHead";
 import { useTheme } from "next-themes";
-import PageHeader from "../../components/PageHeader"
+import SimplePageHeader from "../../components/SimplePageHeader"
 
 // Local Data
 import data from "../../data/portfolio.json";
@@ -32,7 +32,7 @@ const PageName = () => {
 
       <CustomHead />
 
-      <PageHeader/>
+      <SimplePageHeader/>
 
       <div className="container mx-auto">
         <div className="flex mt-10 justify-center">

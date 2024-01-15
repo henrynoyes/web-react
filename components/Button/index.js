@@ -19,7 +19,7 @@ const Button = ({ children, type, onClick, classes }) => {
       <button
         onClick={onClick}
         type="button"
-        className={`text-sm tablet:text-base p-1 laptop:p-2 m-1 laptop:m-2 rounded-lg flex justify-center items-center transition-all ease-out duration-300 ${
+        className={`text-base p-1 laptop:p-2 m-1 laptop:m-2 rounded-lg flex justify-center items-center transition-all ease-out duration-300 ${
           theme === "dark"
             ? "hover:bg-red-800 text-white"
             : "hover:bg-red-200 text-black"
@@ -33,7 +33,7 @@ const Button = ({ children, type, onClick, classes }) => {
     <button
       onClick={onClick}
       type="button"
-      className={`text-sm tablet:text-base p-1 laptop:p-2 m-1 laptop:m-2 rounded-lg flex items-center transition-all ease-out duration-300 ${
+      className={`text-base p-1 laptop:p-2 m-1 laptop:m-2 rounded-lg flex items-center transition-all ease-out duration-300 ${
         theme === "dark"
           ? "hover:bg-red-200"
           : "hover:bg-red-800 text-white"

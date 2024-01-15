@@ -31,13 +31,13 @@ const PageHeader = () => {
               } dark:text-white`}
             >
               {theme === "dark" ? (
-                <div className="sliding mt-5">
+                <div className="sliding">
                     {mounted && (
                       <Image
                       alt="rover"
-                      src="/images/header/pixel-cobra.png"
-                      width={32}
-                      height={32}
+                      src="/images/header/scaled-pixel-cobra.png"
+                      width={71}
+                      height={55}
                       ></Image>
                     )}
                 </div>
@@ -110,13 +110,13 @@ const PageHeader = () => {
         } dark:text-white top-0 z-10 tablet:flex`}
       >
         {theme === "dark" ? (
-          <div className="sliding mt-5">
+          <div className="sliding">
               {mounted && (
                 <Image
                 alt="rover"
-                src="/images/header/pixel-cobra.png"
-                width={32}
-                height={32}
+                src="/images/header/scaled-pixel-cobra.png"
+                width={71}
+                height={55}
                 ></Image>
               )}
           </div>

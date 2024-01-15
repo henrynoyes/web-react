@@ -32,13 +32,13 @@ const MovingHeader = ({ handleWorkScroll, handleAboutScroll, handleProjectScroll
               } dark:text-white`}
             >
               {theme === "dark" ? (
-                <div className="sliding mt-5">
+                <div className="sliding">
                     {mounted && (
                       <Image
                       alt="rover"
-                      src="/images/header/pixel-cobra.png"
-                      width={32}
-                      height={32}
+                      src="/images/header/scaled-pixel-cobra.png"
+                      width={71}
+                      height={55}
                       ></Image>
                     )}
                 </div>
@@ -61,14 +61,15 @@ const MovingHeader = ({ handleWorkScroll, handleAboutScroll, handleProjectScroll
                     setTheme(theme === "dark" ? "light" : "dark")
                   }
                   type="header"
+                  classes="mb-2 mr-2"
                 >
                   <Image
                     alt="darkmode toggle"
                     src={`/images/header/${
                       theme === "dark" ? "moon.svg" : "sun.svg"
                     }`}
-                    height={26}
-                    width={26}
+                    height={32}
+                    width={32}
                   ></Image>
                 </Button>
 
@@ -114,13 +115,13 @@ const MovingHeader = ({ handleWorkScroll, handleAboutScroll, handleProjectScroll
         } dark:text-white top-0 z-10 tablet:flex`}
       >
         {theme === "dark" ? (
-          <div className="sliding mt-5">
+          <div className="sliding">
               {mounted && (
                 <Image
                 alt="rover"
-                src="/images/header/pixel-cobra.png"
-                width={32}
-                height={32}
+                src="/images/header/scaled-pixel-cobra.png"
+                width={71}
+                height={55}
                 ></Image>
               )}
           </div>
