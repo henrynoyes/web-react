@@ -5,24 +5,20 @@ import WorkCard from "../components/WorkCard";
 import { useIsomorphicLayoutEffect } from "../utils";
 import { stagger } from "../animations";
 import Footer from "../components/Footer";
-import Head from "next/head";
 import About from "../components/About"
 import { useTheme } from "next-themes";
 import MovingHeader from "../components/MovingHeader"
+import CustomHead from "../components/CustomHead";
 
-// Local Data
 import data from "../data/portfolio.json";
 
 export default function Home() {
   
-  // Ref
   const workRef = useRef();
   const aboutRef = useRef();
   const projectRef = useRef();
   const textOne = useRef();
   const router = useRouter();
-
-  // Handling Scroll
 
   const handleAboutScroll = () => {
     window.scrollTo({
@@ -57,21 +53,14 @@ export default function Home() {
     );
   }, []);
   
-
   const { theme } = useTheme();
-
-  // ${theme === "dark" ? "bg-moonsoil text-black" : "bg-marssoil text-white"}
-  // ${theme === "dark" ? "bg-[#D9D9D9] text-white" : "bg-[#B76945] text-black"}
 
   return (
     <div className={`relative
     ${theme === "dark" ? "bg-moonsoil text-black" : "bg-marssoil text-white"}
     `}>
 
-      <Head>
-        <title>{data.name}</title>
-        <link rel="icon" type="image/x-icon" href="/images/icon.ico" />
-      </Head>
+      <CustomHead />
 
       <MovingHeader
         handleWorkScroll={handleWorkScroll}

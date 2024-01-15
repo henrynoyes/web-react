@@ -3,12 +3,9 @@ import GalleryCard from "../../components/GalleryCard";
 import { useIsomorphicLayoutEffect } from "../../utils";
 import { stagger } from "../../animations";
 import Footer from "../../components/Footer";
-import Head from "next/head";
+import CustomHead from "../../components/CustomHead";
 import { useTheme } from "next-themes";
 import PageHeader from "../../components/PageHeader"
-
-// Local Data
-import data from "../../data/portfolio.json";
 
 const CobraPage = () => {
   
@@ -30,10 +27,7 @@ const CobraPage = () => {
     ${theme === "dark" ? "bg-moonsoil text-black" : "bg-marssoil text-white"}
     `}>
 
-      <Head>
-        <title>{data.name}</title>
-        <link rel="icon" type="image/x-icon" href="/images/icon.ico" />
-      </Head>
+      <CustomHead />
 
       <PageHeader/>
 
