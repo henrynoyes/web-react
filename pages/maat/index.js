@@ -32,7 +32,7 @@ const MaatPage = () => {
 
       <Head>
         <title>{data.name}</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="/images/icon.ico" />
       </Head>
 
       <PageHeader/>
