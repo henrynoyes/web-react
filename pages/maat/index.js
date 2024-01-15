@@ -49,7 +49,7 @@ const MaatPage = () => {
         </div>
 
 
-        <div className="flex justify-center mt-4 p-2 laptop:p-0">
+        <div className="flex justify-center mt-4 p-2 laptop:p-1">
           <p className="tablet:w-2/3 m-6 text-sm laptop:text-lg">
           I worked full-time as a plasma engineer co-op at the energy startup MAAT Energy for 6 months. MAAT Energy focuses on using atmospheric microwave plasma to pyrolyze methane gas into hydrogen and carbon black. 
           This offers a low-cost, environmentally-friendly alternative to conventional hydrogen production methods such as steam reforming and electrolysis. During my time at MAAT, 

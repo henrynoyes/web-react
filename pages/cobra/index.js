@@ -49,7 +49,7 @@ const CobraPage = () => {
         </div>
 
 
-        <div className="flex justify-center mt-4 p-2 laptop:p-0">
+        <div className="flex justify-center mt-4 p-2 laptop:p-1">
           <p className="tablet:w-2/3 m-6 text-sm laptop:text-lg">
           I was a member of the Northeastern University team competing in the 2022 NASA Big Idea Challenge which focused on creating novel mobility solutions for robotic exploration on the lunar south pole. 
           Our team built COBRA, the Crater Observing Bio-inspired Rolling Articulator. COBRA is an 11-DOF modular snake robot capable of sidewinding and tumbling down crater slopes. 

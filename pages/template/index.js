@@ -49,7 +49,7 @@ const PageName = () => {
         </div>
 
 
-        <div className="flex justify-center mt-4 p-2 laptop:p-0">
+        <div className="flex justify-center mt-4 p-2 laptop:p-1">
           <p className="tablet:w-2/3 m-6 text-sm laptop:text-lg">
             Description
           </p>

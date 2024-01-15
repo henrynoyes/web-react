@@ -49,7 +49,7 @@ const RiverPage = () => {
         </div>
 
 
-        <div className="flex justify-center mt-4 p-2 laptop:p-0">
+        <div className="flex justify-center mt-4 p-2 laptop:p-1">
           <p className="tablet:w-2/3 m-6 text-sm laptop:text-lg">
           I worked full-time as a robotics engineer co-op at Northeastern&apos;s RIVeR Lab for 6 months. I developed software for a DARPA-funded mixed reality project focused on perceptually-enabled task guidance. 
           The goal of the program is to
