@@ -51,7 +51,7 @@ const SimplePageHeader = () => {
           </div>
         )}
 
-        <div className="flex items-center mr-2">
+        <div className="flex items-center">
           <Button
             onClick={() =>
               setTheme(theme === "dark" ? "light" : "dark")
@@ -68,7 +68,7 @@ const SimplePageHeader = () => {
             ></Image>
           </Button>
 
-          <Button onClick={() => router.push("/")} type="header">
+          <Button onClick={() => router.push("/")} type="header" classes="ml-0">
             Home
           </Button>
         </div>

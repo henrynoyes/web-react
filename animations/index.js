@@ -17,7 +17,7 @@ export const slide = (target, offset) => {
       scrollTrigger: {
         scrub: 1,
       },
-      x: document.documentElement.scrollWidth < 768 ? document.documentElement.scrollWidth - 160 : document.documentElement.scrollWidth - offset,
+      x: document.documentElement.scrollWidth < 768 ? document.documentElement.scrollWidth - 175 : document.documentElement.scrollWidth - offset,
     }
   );
 };
