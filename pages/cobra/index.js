@@ -32,6 +32,7 @@ const CobraPage = () => {
 
       <Head>
         <title>{data.name}</title>
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <PageHeader/>

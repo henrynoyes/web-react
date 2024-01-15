@@ -70,7 +70,7 @@ export default function Home() {
 
       <Head>
         <title>{data.name}</title>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <MovingHeader
