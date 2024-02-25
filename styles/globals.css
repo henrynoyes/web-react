@@ -3,11 +3,13 @@
 @tailwind utilities;
 @import "./markdown.css";
 @import "@fortawesome/fontawesome-svg-core/styles.css";
-@import "@fontsource/source-sans-pro";
+@import "@fontsource/source-sans-pro/400.css";
+@import "@fontsource/source-sans-pro/600.css";
 @import "@fontsource/libre-caslon-text";
 @import "@fontsource/ubuntu";
 @import "@fontsource/montserrat";
 @import "@fontsource/bungee-hairline";
+@import "@fontsource/titillium-web";
 
 * {
   font-family: 'Source Sans Pro', sans-serif;

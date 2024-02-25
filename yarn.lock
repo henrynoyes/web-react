@@ -189,6 +189,11 @@
   resolved "https://registry.yarnpkg.com/@fontsource/source-sans-pro/-/source-sans-pro-5.0.8.tgz#e246405a3bcdcf2ae6f9d7019c0d78ead71a492a"
   integrity sha512-5U2UvIYRkCMozZ388gCE73PEpa2MFgN/0t9O4a1FF7bGT/MIneQWSL1XpWZ8iMVYdh6ntxRf3iFA6slCIuFgkg==
 
+"@fontsource/titillium-web@^5.0.18":
+  version "5.0.18"
+  resolved "https://registry.yarnpkg.com/@fontsource/titillium-web/-/titillium-web-5.0.18.tgz#1d6fbcef225c9a81dc399a1f9ce9706065fe6a5e"
+  integrity sha512-GBmp0vqS0iGvUaA1tLtxFRXzeeQ+on0mrRDr0iLUo3B1YzR41ljB5zHO5U/VBByGVzq7CATtCbXov3G2mWCPbQ==
+
 "@fontsource/ubuntu@^5.0.8":
   version "5.0.8"
   resolved "https://registry.yarnpkg.com/@fontsource/ubuntu/-/ubuntu-5.0.8.tgz#5009cfaf00057277acdb88caa3537686248a484d"

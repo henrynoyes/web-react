@@ -9,10 +9,11 @@ import About from "../components/About"
 import { useTheme } from "next-themes";
 import MovingHeader from "../components/MovingHeader"
 import CustomHead from "../components/CustomHead";
-
 import data from "../data/portfolio.json";
+import { getAllPosts } from "../utils/api";
 
-export default function Home() {
+
+export default function Home({ posts }) {
   
   const workRef = useRef();
   const aboutRef = useRef();
@@ -117,19 +118,35 @@ export default function Home() {
           <h1 className="text-4xl m-2">My Projects</h1>
 
           <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-3 gap-4">
-            {data.projects.map((project) => (
-              <WorkCard
-                key={project.id}
-                img={project.imageSrc}
+            {posts.map((project) => (
+                <WorkCard
+                key={project.date}
+                img={project.coverImage}
                 name={project.title}
-                onClick={() => window.open(project.url)}
-              />
+                onClick={() => router.push(`/${project.slug}`)}
+                />
             ))}
           </div>
+
         </div>
         
         <Footer />
       </div>
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const posts = getAllPosts([
+    "date",
+    "title",
+    "coverImage",
+    "slug",
+  ]);
+
+  return {
+    props: {
+      posts: [...posts],
+    },
+  };
 }
