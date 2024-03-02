@@ -1,5 +1,5 @@
 ---
-date: '2024-02-22'
+date: '2024-03-01'
 title: JARVIS-GPT
 tagline: Just a Rather Very Intelligent System
 coverImage: /images/projects/jarvis/jarvis_logo.png
@@ -24,6 +24,8 @@ And perhaps it is just a glorified DIY Alexa... but at least, in my opinion, it 
 # Hardware
 
 The main hardware consists of a Raspberry Pi 4B with a [Respeaker 4-mic Array Hat](https://wiki.seeedstudio.com/ReSpeaker_4_Mic_Array_for_Raspberry_Pi/) for audio detection. These components are housed in a 3D-printed enclosure, with openings for the microphones and LEDs. The design of the enclosure was inspired by the Arc Reactor and the red/silver PLA was chosen to match the colorway of the MK5 suit. The audio is output through the 3.5mm jack to an amplifier that is connected to two wall-mounted speakers.
+
+![reactor](images/projects/jarvis/closeup-reactor.png)
 
 
 # Software
@@ -50,6 +52,13 @@ To ensure privacy, all personal information such as API keys are stored locally 
 - PHUE_IP – Used for the `power_lights` and `change_brightness` functions. Found in the [Philips Hue app](https://www.philips-hue.com/en-us/explore-hue/apps/bridge)
 
 `config.yaml` can be edited to configure default settings for startup and shutdown
+
+
+# Morning Message (MacOS)
+
+I developed a secondary functionality for JARVIS on MacOS. With the push of a button, JARVIS will parse your notification center, pull daily weather data, and give you a motivating and informative morning message to get the day started. To configure this, I mapped a keyboard shortcut to an [automator workflow](https://support.apple.com/guide/automator/use-a-shell-script-action-in-a-workflow-autbbd4cc11c/mac) that runs [good_morning.py](https://github.com/henrynoyes/jarvis-gpt/tree/macos-dev/good_morning.py) (in the appropriate environment). Within the python script is a modified version of the main JARVIS class from the original implementation, which calls to OpenWeatherMap for a daily forecast and fetches notification data using an [AppleScript](https://github.com/henrynoyes/jarvis-gpt/tree/macos-dev/notif.scpt). See an example of this in action in the video below.
+
+[![video](https://img.youtube.com/vi/qYWRlLbLLMk/0.jpg)](https://www.youtube.com/watch?v=qYWRlLbLLMk)
 
 
 # Future Developments

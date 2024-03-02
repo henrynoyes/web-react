@@ -28,7 +28,7 @@
 }
 
 .markdown-class a {
-  @apply tablet:text-xl text-base text-emerald-400 underline transition-all duration-200 ease-out hover:text-emerald-500;
+  @apply tablet:text-xl text-base text-blue-800 underline transition-all duration-200 ease-out hover:text-blue-600;
 }
 
 .markdown-class p {
