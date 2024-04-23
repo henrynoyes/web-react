@@ -12,6 +12,7 @@ import CustomHead from "../components/CustomHead";
 import data from "../data/portfolio.json";
 import { getAllPosts } from "../utils/api";
 
+// testing
 
 export default function Home({ posts }) {
   
