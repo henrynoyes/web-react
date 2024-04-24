@@ -90,7 +90,7 @@ const CobraPage = () => {
             h_disp={0.66}
             name="Northeastern Global News Article"
             linkText="Northeastern students designed a snake robot that could help NASA find water on the moon"
-            linkURL="ttps://news.northeastern.edu/2022/12/07/snake-robot-nasa-moon/"
+            linkURL="https://news.northeastern.edu/2022/12/07/snake-robot-nasa-moon/"
           />
           <GalleryCard
             img="/images/work/cobra/asme-poster.png"
