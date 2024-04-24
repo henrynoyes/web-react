@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -13,14 +14,13 @@ const About = ({}) => {
             className="flex justify-center items-center rounded-lg overflow-hidden laptop:basis-1/4"
             style={{ height: "400px" }}
         >
-        <Image
-            alt={"profile picture"}
+        <img
+            alt="profile picture"
             className="flex rounded-lg"
-            src={"/images/profile_pic.jpeg"}
-            width={400}
-            height={400}
-            priority={true}
-        ></Image>
+            src="/images/profile_pic.jpeg"
+            width="400px"
+            height="400px"
+          />
         </div>
         <div className="relative basis-1/2">
           <h1 className="m-4 mt-10 laptop:mt-4 text-4xl">About Me</h1>

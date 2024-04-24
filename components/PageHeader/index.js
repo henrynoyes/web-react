@@ -33,23 +33,23 @@ const PageHeader = () => {
               {theme === "dark" ? (
                 <div className="sliding">
                     {mounted && (
-                      <Image
+                      <img
                       alt="rover"
                       src="/images/header/scaled-pixel-cobra.png"
                       width={71}
                       height={55}
-                      ></Image>
+                      />
                     )}
                 </div>
               ) : (
                 <div className="sliding">
                   {mounted && (
-                    <Image
+                    <img
                     alt="rover"
                     src="/images/header/pixel-persy.png"
                     width={71}
                     height={55}
-                    ></Image>
+                    />
                   )}
                 </div>
               )}
@@ -61,18 +61,18 @@ const PageHeader = () => {
                   }
                   type="header"
                 >
-                  <Image
+                  <img
                     alt="darkmode toggle"
                     src={`/images/header/${
                       theme === "dark" ? "moon.svg" : "sun.svg"
                     }`}
                     height={26}
                     width={26}
-                  ></Image>
+                  />
                 </Button>
 
                 <Popover.Button>
-                  <Image
+                  <img
                     alt="menu"
                     src={`/images/header/${
                       !open
@@ -85,7 +85,7 @@ const PageHeader = () => {
                     }`}
                     height={32}
                     width={32}
-                  ></Image>
+                  />
                 </Popover.Button>
               </div>
             </div>
@@ -112,23 +112,23 @@ const PageHeader = () => {
         {theme === "dark" ? (
           <div className="sliding">
               {mounted && (
-                <Image
+                <img
                 alt="rover"
                 src="/images/header/scaled-pixel-cobra.png"
                 width={71}
                 height={55}
-                ></Image>
+                />
               )}
           </div>
         ) : (
           <div className="sliding">
             {mounted && (
-              <Image
+              <img
               alt="rover"
               src="/images/header/pixel-persy.png"
               width={71}
               height={55}
-              ></Image>
+              />
             )}
           </div>
         )}
@@ -142,12 +142,12 @@ const PageHeader = () => {
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               type="header"
             >
-              <Image
+              <img
                 alt="darkmode toggle"
                 src={`/images/header/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
                 width={32}
                 height={32}
-              ></Image>
+              />
             </Button>
           )}
           </div>

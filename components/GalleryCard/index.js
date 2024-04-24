@@ -23,17 +23,14 @@ const GalleryCard = ({ img, AR_src, w_disp, h_disp, name, linkText, linkURL}) =>
       className="p-2 first:ml-0"
     >
       <div
-        className="rounded-lg overflow-hidden relative"
+        className="rounded-lg overflow-hidden flex items-center justify-center"
         onClick={openModal}
       >
-        <Image
+        <img
           alt={name}
           className="image-solo"
           src={img}
-          width={w_disp}
-          height={h_disp}
-          sizes="100vw"
-        ></Image>
+        />
       </div>
       <div className="flex items-center justify-center">
         <h1 className="mt-2 text-xl tablet:text-2xl">
@@ -53,14 +50,14 @@ const GalleryCard = ({ img, AR_src, w_disp, h_disp, name, linkText, linkURL}) =>
           <div className="modal-content">
             <div className="flex-row">
               <Button type="cancel" onClick={closeModal}>
-                <Image
+                <img
                   alt="close"
                   src="/images/header/cancel-white.svg"
                   width={32}
                   height={32}
-                ></Image>
+                />
               </Button>
-              <Image alt={name} src={img} 
+              <img alt={name} src={img} 
               width={(window.innerWidth < 768 ? window.innerHeight : window.innerWidth) * 0.35 * AR_src}
               height={(window.innerWidth < 768 ? window.innerHeight : window.innerWidth) * 0.35}/>
             </div>

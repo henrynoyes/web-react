@@ -20,7 +20,6 @@
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@headlessui/react": "^1.6.6",
-    "@netlify/plugin-nextjs": "^4.41.3",
     "autoprefixer": "^10.4.7",
     "gray-matter": "^4.0.3",
     "gsap": "^3.10.4",

@@ -10,13 +10,13 @@ const WorkCard = ({ img, name, onClick }) => {
         className="cursor-pointer rounded-lg overflow-hidden relative"
         onClick={onClick}
       >
-        <Image
+        <img
           alt={name}
           className="image-link"
           src={img}
           width={600}
           height={600}
-        ></Image>
+        />
       </div>
       <div className="flex items-center justify-center">
         <h1 className="mt-2 text-2xl font-medium">

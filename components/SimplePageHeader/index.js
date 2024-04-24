@@ -30,23 +30,23 @@ const SimplePageHeader = () => {
         {theme === "dark" ? (
           <div className="sliding">
               {mounted && (
-                <Image
+                <img
                 alt="rover"
                 src="/images/header/scaled-pixel-cobra.png"
                 width={71}
                 height={55}
-                ></Image>
+                />
               )}
           </div>
         ) : (
           <div className="sliding">
             {mounted && (
-              <Image
+              <img
               alt="rover"
               src="/images/header/pixel-persy.png"
               width={71}
               height={55}
-              ></Image>
+              />
             )}
           </div>
         )}
@@ -58,14 +58,14 @@ const SimplePageHeader = () => {
             }
             type="header"
           >
-            <Image
+            <img
               alt="darkmode toggle"
               src={`/images/header/${
                 theme === "dark" ? "moon.svg" : "sun.svg"
               }`}
               height={32}
               width={32}
-            ></Image>
+            />
           </Button>
 
           <Button onClick={() => router.push("/")} type="header" classes="ml-0">
@@ -82,23 +82,23 @@ const SimplePageHeader = () => {
         {theme === "dark" ? (
           <div className="sliding">
               {mounted && (
-                <Image
+                <img
                 alt="rover"
                 src="/images/header/scaled-pixel-cobra.png"
                 width={71}
                 height={55}
-                ></Image>
+                />
               )}
           </div>
         ) : (
           <div className="sliding">
             {mounted && (
-              <Image
+              <img
               alt="rover"
               src="/images/header/pixel-persy.png"
               width={71}
               height={55}
-              ></Image>
+              />
             )}
           </div>
         )}
@@ -112,12 +112,12 @@ const SimplePageHeader = () => {
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               type="header"
             >
-              <Image
+              <img
                 alt="darkmode toggle"
                 src={`/images/header/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
                 width={32}
                 height={32}
-              ></Image>
+              />
             </Button>
           )}
           </div>
