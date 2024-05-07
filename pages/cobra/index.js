@@ -51,7 +51,7 @@ const CobraPage = () => {
           I was responsible for designing and constructing the power system, which consists of individual LiPo batteries connected to voltage regulators that power each module. 
           I also assisted in writing the proposal and technical reports and rigorously testing the system. At the Big Idea Forum, we presented our unique rover locomotion in the deserts of Pasadena, California along with 
           6 other university teams. At the conclusion of the conference, we were awarded the Artemis Award for “the concept with the best potential to contribute to and be integrated into an Artemis mission.” 
-          Since then, we have received additional funding from other sources to continue developing the current system and to manufacture a second, more space-rated prototype.
+          Since then, we have continued developing the system and are actively researching its locomotion and loco-manipulation capabilites.
           </p>
         </div>
         
@@ -70,7 +70,7 @@ const CobraPage = () => {
             AR_src={1.35}
             w_disp={1}
             h_disp={0.74}
-            name="Nat Geo Article"
+            name="National Geographic Article"
             linkText="'Snakes' on the moon? These helpers could soon join our lunar mission."
             linkURL="https://www.nationalgeographic.com/science/article/lunar-robot-snakes-explore-the-moon-nasa"
           />
