@@ -1,5 +1,5 @@
 ---
-date: '2024-03-07'
+date: '2024-08-26'
 title: JARVIS-GPT
 tagline: Just a Rather Very Intelligent System
 coverImage: /images/projects/jarvis/jarvis_logo.png
@@ -20,7 +20,10 @@ In addition to the conversational abilities of OpenAI's GPT models, JARVIS-GPT t
 
 And perhaps it is just a glorified DIY Alexa... but at least, in my opinion, it looks and sounds cool in the process :D
 
-# *DEMO VIDEO COMING SOON\*
+
+# Demo Video
+
+[![demo video](https://img.youtube.com/vi/-M6XSAEWaf0/0.jpg)](https://www.youtube.com/watch?v=-M6XSAEWaf0)
 
 
 # Hardware
@@ -65,8 +68,6 @@ I developed a secondary functionality for JARVIS on MacOS. With the push of a bu
 
 # Future Developments
 
-- Allow multiple exchanges with historical context, more like ChatGPT (ex: "Read me my notes from yesterday" –> "Delete the second one")
 - Replace startup mp3 with custom message detailing date, time, and weather
 - Replace local notetaking functionality with a cloud-based application that can be accessed from other devices (mobile/PC)
-- Create template branch with custom applications removed and only basic functionality
 - Integrate text-to-3D-models using [Shape-E](https://github.com/openai/shap-e) ("Hey JARVIS, make me a 3D model of ...") – Long term: text-to-CAD? ("Hey JARVIS, create a CAD model of a box with dimensions ... Add a cylinder on top with dimensions ... and position it ...")
