@@ -71,7 +71,7 @@ const MaatPage = () => {
             h_disp={0.65}
             name="RF Modeling in COMSOL"
             linkText="Novel Plasma Catalysis Reformer of CO2 for Power to Jet Fuel and Energy Storage"
-            linkURL="https://www.sbir.gov/sbirsearch/detail/2282195"
+            linkURL="https://www.maatenergy.com/technology/co2-reforming"
           />
         </div>
         
