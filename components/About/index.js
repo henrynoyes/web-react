@@ -25,10 +25,10 @@ const About = ({}) => {
         <div className="relative basis-1/2">
           <h1 className="m-4 mt-10 laptop:mt-4 text-4xl">About Me</h1>
           <p className="m-6 text-md laptop:text-xl">
-            I am a first-year graduate student at Northeastern University, where I am pursuing my Master of Science in Robotics. I was
+            I am a first-year graduate student at Northeastern University, where I am pursuing my Master of Science in Robotics. I am
             {" "}
             <Link href="https://news.northeastern.edu/2024/05/07/nasa-research-fellow-henry-noyes/">
-            <a className={theme === "dark" ? "text-link-red" : "text-link-blue"} target="_blank" rel="noopener noreferrer">recently selected as a NASA Space Technology Graduate Research Fellow</a>
+            <a className={theme === "dark" ? "text-link-red" : "text-link-blue"} target="_blank" rel="noopener noreferrer">working as a NASA Space Technology Graduate Research Fellow</a>
             </Link>
             {" "}
             to advance autonomy in snake robots for lunar exploration. As an undergraduate student at Northeastern, I graduated summa cum laude with a Bachelor of Science in Mathematics and Physics, and a minor in Data Science.
